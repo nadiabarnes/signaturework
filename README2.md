@@ -74,35 +74,4 @@ The code relies on a custom graph library `DGraphHW`, which provides:
 
 ---
 
-## Example Execution
-1. Create a graph object:
-   ```python
-   G = DG.DGraph()
-   f = open('roads.txt', 'r')
-   G.loadJSON(f.read())
-   ```
 
-2. Find an indefinite path:
-   ```python
-   print("Indefinite path is ", str(find_indefinite_path(G, 'a', 50)))
-   ```
-
-3. Use the incomplete `findInital` function:
-   ```python
-   print(str(findInital('e', 'o', 'f')))
-   ```
-
----
-
-## Notes and Limitations
-- The **`findInital` function** is incomplete and currently only prints edges in the graph.
-- The graph `G` is **modified in-place** during execution of `find_indefinite_path`.
-- The file `roads.txt` must be present and contain valid JSON-formatted graph data.
-- The code does not handle errors such as missing nodes or invalid inputs.
-
----
-
-## Future Enhancements
-- Complete the `findInital` function to implement its intended functionality.
-- Add error handling for invalid inputs and file formats.
-- Optimize cycle detection and edge filtering for large graphs.
