@@ -59,26 +59,8 @@ This class inherits from `ToggleIt` and implements a **suboptimal heuristic** fo
 
 ## Actions
 - An action corresponds to toggling a specific cell.
-- Each action also toggles the cell's neighbors (if within grid boundaries).
+- Each action also toggles the cell's neighbors.
 
-## Testing
-The provided code includes a commented-out section for testing:
-- Initializing a grid.
-- Displaying the grid.
-- Verifying if the initial state matches the goal.
-- Generating possible actions.
-- Applying an action to see the resulting state.
-- Calculating heuristic values for the current state.
-
-Example:
-```python
-# Testing ToggleIt_optimal
-board = ToggleIt_optimal(3)
-print(board.showBoard())
-print("Goal Test:", board.goal_test(board.initial))
-print("Actions:", board.actions(board.initial))
-board.result(board.initial, 4)  # Apply action at index 4
-print(board.showBoard())
 ```
 
 ## Requirements
@@ -88,13 +70,6 @@ print(board.showBoard())
 
 ## Heuristics Comparison
 - **Optimal Heuristic**:
-  - More accurate and admissible.
   - Considers the maximum potential toggles per action based on grid size.
 - **Suboptimal Heuristic**:
-  - Simple but less effective.
   - Directly counts the number of "1"s in the current state.
-
-## Future Enhancements
-- Integrate a search algorithm (e.g., A*) to solve the puzzle automatically.
-- Expand testing for larger grid sizes.
-- Add visualization tools for better understanding of state transitions.
